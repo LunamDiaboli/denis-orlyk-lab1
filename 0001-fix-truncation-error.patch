@@ -1,0 +1,74 @@
+From e953a4301d5129737f4fc711b1976ea78e75c3b9 Mon Sep 17 00:00:00 2001
+From: Sergii Piatakov <sergii.piatakov@globallogic.com>
+Date: Thu, 15 Nov 2018 15:28:04 +0200
+Subject: [PATCH 1/2] fix truncation error
+
+To convert float to integer the truncation is performed, but the
+rounding is expected.
+
+Test: Add (4.9, 4.9) should return 10.
+Signed-off-by: Sergii Piatakov <sergii.piatakov@globallogic.com>
+
+	modified:   calculator.cpp
+---
+ .calculator.cpp.un~ | Bin 0 -> 2010 bytes
+ calculator.cpp      |   2 +-
+ calculator.cpp~     |  15 +++++++++++++++
+ 3 files changed, 16 insertions(+), 1 deletion(-)
+ create mode 100644 .calculator.cpp.un~
+ create mode 100644 calculator.cpp~
+
+diff --git a/.calculator.cpp.un~ b/.calculator.cpp.un~
+new file mode 100644
+index 0000000000000000000000000000000000000000..17680fbc66afab0217e16a9caf989b08fe73612d
+GIT binary patch
+literal 2010
+zcmWH`%$*;a=aT=Ffypm5scx2AoT|^X#xED5C+f`)+aI+g<&f(~%Le<Kb>}BCFfecf
+zu?S~TYDsBPo<gF6wn7pR8|ax@1I1Z^m=TIufHVkzXc%V5xF_q$0#Olv0W8hHzyzg1
+z6iA8_#{UllU=f(WC{0=jfI?CYss$dZKz<p_7+`cbfTM$f;j08tkOPRhfS4bMLD8aS
+z2LTEui76%qiN*>VX_*xYB}Juq$%!SI`FRSdMMe2Vnn0C|wWf{W7zM>3GZ4c7$QV$v
+z0E5vOg@pu}G&@iq2!jATRDo>d7<EF9QBclf17bcP2C;c;AV9&x)zJmW7gPWO<jf4p
+z#_YBb0Aym#>CmVKMJ>oo7yv~(+)<-Z4GR`BX;4TKifT9Hs0IZ;D5^mPG$?8qtAPa8
+z_ygy4Sjqq?2W48UDxooroS}hA!Lbf<A4ng=XiS4bfdT-E2~f!k0w6XxRDm>druKl=
+KnxsVC^Hl(Q6mH@G
+
+literal 0
+HcmV?d00001
+
+diff --git a/calculator.cpp b/calculator.cpp
+index b91afea..498f7b9 100644
+--- a/calculator.cpp
++++ b/calculator.cpp
+@@ -2,7 +2,7 @@
+ 
+ int Calculator::Add (double a, double b)
+ {
+-    return a + b;
++    return a + b + 0.5;
+ }
+ 
+ int Calculator::Sub (double a, double b)
+diff --git a/calculator.cpp~ b/calculator.cpp~
+new file mode 100644
+index 0000000..34f8d05
+--- /dev/null
++++ b/calculator.cpp~
+@@ -0,0 +1,15 @@
++#include "calculator.h"
++
++int Calculator::Add (double a, double b)
++{
++<<<<<<< HEAD
++    return a + b;
++=======
++	return a + b + 0.5;
++>>>>>>> 4ad40a3 (fix truncation error)
++}
++
++int Calculator::Sub (double a, double b)
++{
++    return Add (a, -b);
++}
+-- 
+2.51.0.windows.1
+

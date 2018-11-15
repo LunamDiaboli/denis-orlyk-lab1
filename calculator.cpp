@@ -31,3 +31,8 @@ int main()
 		<< "Pow: " << calc.Add(x, y) << std:endl;
 	return 0;
 }
+
+int Calculator::Mul (double a, double b)
+{
+    return a * b + 0.5;
+}

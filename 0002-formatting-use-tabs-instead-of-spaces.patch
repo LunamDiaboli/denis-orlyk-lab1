@@ -1,0 +1,79 @@
+From ac68ea8589c88b79aefa516d96d843539a67b04c Mon Sep 17 00:00:00 2001
+From: Sergii Piatakov <sergii.piatakov@globallogic.com>
+Date: Thu, 15 Nov 2018 15:26:35 +0200
+Subject: [PATCH 2/2] formatting: use tabs instead of spaces
+
+Signed-off-by: Sergii Piatakov <sergii.piatakov@globallogic.com>
+
+	modified:   calculator.h
+---
+ .calculator.cpp.un~ | Bin 2010 -> 1975 bytes
+ calculator.cpp~     |   8 ++++----
+ calculator.h        |   6 +++---
+ 3 files changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/.calculator.cpp.un~ b/.calculator.cpp.un~
+index 17680fbc66afab0217e16a9caf989b08fe73612d..13768182df6d30f4d99c0194caecad5b1c87085d 100644
+GIT binary patch
+literal 1975
+zcmWH`%$*;a=aT=Ffypm5scx2AoT|^X#xED5C+f`)+aI+g<&f(~%Le<Kb>}BCFfecf
+zu?S~TYDsBPo`Pdaih@R>j)HEIrZrHU3y2w^m<33K0EmWRhKzf%y(|zF@fX0-3=B+A
+z8bpDl*kSztKmZnj35?RDg#aidVWA15K_-;Ji~&YRGdMaJ7`{pX1=)a@1Bm&77!)n+
+zwh#bh^1-4!Q9)ZF$=b9L9DktrVg_Ou0BK@{aYo}077}FAppfK&>V=0YkdGXHZOHKl
+z%4eWB<O5<*RPfk9fP#msqYIEPt^fqktP74uU|bsLnZjZdqy=OI41i)5WE>cb#wIKz
+z$fQ9z&;qI#9;!e-a%^@W$0jJsL7I4h7!(y~Sr8~<VFv*U$w|pc24=vrI4!>@H?gE7
+zGcVmrp|m(vp(HV>SRpg7xFj_(MIk>;p|~J1Iki|5sF$%8nun3|FHjtu0$>F>!)UC7
+kf`kG9ifKZz-UF=?!DTQfPy?ur1z}L}inXpaZG6580F<wAe*gdg
+
+literal 2010
+zcmWH`%$*;a=aT=Ffypm5scx2AoT|^X#xED5C+f`)+aI+g<&f(~%Le<Kb>}BCFfecf
+zu?S~TYDsBPo<gF6wn7pR8|ax@1I1Z^m=TIufHVkzXc%V5xF_q$0#Olv0W8hHzyzg1
+z6iA8_#{UllU=f(WC{0=jfI?CYss$dZKz<p_7+`cbfTM$f;j08tkOPRhfS4bMLD8aS
+z2LTEui76%qiN*>VX_*xYB}Juq$%!SI`FRSdMMe2Vnn0C|wWf{W7zM>3GZ4c7$QV$v
+z0E5vOg@pu}G&@iq2!jATRDo>d7<EF9QBclf17bcP2C;c;AV9&x)zJmW7gPWO<jf4p
+z#_YBb0Aym#>CmVKMJ>oo7yv~(+)<-Z4GR`BX;4TKifT9Hs0IZ;D5^mPG$?8qtAPa8
+z_ygy4Sjqq?2W48UDxooroS}hA!Lbf<A4ng=XiS4bfdT-E2~f!k0w6XxRDm>druKl=
+KnxsVC^Hl(Q6mH@G
+
+diff --git a/calculator.cpp~ b/calculator.cpp~
+index 34f8d05..c348ce7 100644
+--- a/calculator.cpp~
++++ b/calculator.cpp~
+@@ -3,13 +3,13 @@
+ int Calculator::Add (double a, double b)
+ {
+ <<<<<<< HEAD
+-    return a + b;
++    return a + b + 0.5;
+ =======
+-	return a + b + 0.5;
+->>>>>>> 4ad40a3 (fix truncation error)
++	return a + b;
++>>>>>>> cbcb06d (formatting: use tabs instead of spaces)
+ }
+ 
+ int Calculator::Sub (double a, double b)
+ {
+-    return Add (a, -b);
++	return Add (a, -b);
+ }
+diff --git a/calculator.h b/calculator.h
+index 3740907..d59d596 100644
+--- a/calculator.h
++++ b/calculator.h
+@@ -3,9 +3,9 @@
+ 
+ class Calculator
+ {
+-    public:
+-        int Add (double, double);
+-        int Sub (double, double);
++	public:
++		int Add (double, double);
++		int Sub (double, double);
+ };
+ 
+ #endif//CALCULATOR_H
+-- 
+2.51.0.windows.1
+
