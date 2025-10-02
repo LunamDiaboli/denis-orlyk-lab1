@@ -36,3 +36,23 @@ int Calculator::Mul (double a, double b)
 {
     return a * b + 0.5;
 }
+
+int Calculator::Pow (double a, double b)
+{
+    return std::pow(a, b) + 0.5;
+}
+
+int main()
+{
+    Calculator calc;
+
+    double x = 4.0, y = 2.0;
+
+    std::cout << "Add: " << calc.Add(x, y) << " "
+              << "Sub: " << calc.Sub(x, y) << " "
+              << "Mul: " << calc.Mul(x, y) << " "
+              << "Pow: " << calc.Pow(x, y) << std::endl;
+
+    return 0;
+}
+

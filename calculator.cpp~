@@ -3,13 +3,22 @@
 int Calculator::Add (double a, double b)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	return a + b + 0.5;
 =======
     return a + b + 0.5;
 >>>>>>> 4d278a9 (improve calculation accuracy)
+=======
+    return a + b + 0.5;
+>>>>>>> 65f03e8 (edited calculator.cpp and calculator.h for some lines)
 }
 
 int Calculator::Sub (double a, double b)
 {
 	return Add (a, -b);
+}
+
+int Calculator::Mul (double a, double b)
+{
+    return a * b + 0.5;
 }

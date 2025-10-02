@@ -3,11 +3,19 @@
 
 class Calculator
 {
+<<<<<<< HEAD
 public:
 	int Add (double, double);
 	int Sub (double, double);
-	int Add (double, double);
-	int Sub (double, double);
+	int Mul (double, double);
+	int Pow (double, double);
+=======
+    public:
+        int Add (double, double);
+        int Sub (double, double);
+	int Mul (double, double);
+	int Pow (double. double);
+>>>>>>> 65f03e8 (edited calculator.cpp and calculator.h for some lines)
 };
 
 #endif//CALCULATOR_H
